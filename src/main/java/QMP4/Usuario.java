@@ -1,8 +1,15 @@
 package QMP4;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Usuario {
-  List<Prenda> guardarropas;
 
-  // va a tener mas cosas
+  private List<Prenda> guardarropas = new ArrayList<>();
+
+  /* public Atuendo sugerencia(this.guardarropas){
+    //TODO
+  }*/
+
+
+
 }

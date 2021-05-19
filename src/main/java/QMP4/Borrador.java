@@ -7,6 +7,7 @@ public class Borrador {
   private Trama trama = Trama.LISA;
   private Color colorPrincipal;
   private Color colorSecundario;
+  private AfinidadClima afinidadClima;
 
   public Borrador(TipoDePrenda tipoDePrenda) {
     //TODO: validateNonNull
@@ -28,10 +29,14 @@ public class Borrador {
     //TODO: validateNonNull y por defecto lisa
     this.trama = trama;
   }
+  public void especificarAfinidadClima(AfinidadClima afinidadClima) {
+    //TODO: validateNonNull y por defecto lisa
+    this.afinidadClima = afinidadClima;
+  }
 
   public Prenda crearPrenda() {
     //TODO: validateNonNull
-    return new Prenda(this.tipoDePrenda, this.material, this.trama, this.colorPrincipal, this.colorSecundario);
+    return new Prenda(this.tipoDePrenda, this.material, this.trama, this.colorPrincipal, this.colorSecundario,this.afinidadClima);
   }
   public boolean validarMaterialConsistenteConTipoDePrenda(Material material) {
     //TODO
