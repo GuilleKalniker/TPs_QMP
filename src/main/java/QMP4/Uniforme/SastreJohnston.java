@@ -1,4 +1,4 @@
-package QMP4.Conjuntos;
+package QMP4.Uniforme;
 
 import QMP4.Prenda.Prenda;
 

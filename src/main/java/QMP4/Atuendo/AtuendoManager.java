@@ -1,4 +1,4 @@
-package QMP4.Conjuntos;
+package QMP4.Atuendo;
 
 import QMP4.Clima.EstadoDelTiempo;
 import QMP4.Clima.ServicioMeteorologicoAccuWeather;
