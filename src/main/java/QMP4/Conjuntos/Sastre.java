@@ -1,4 +1,6 @@
-package QMP4;
+package QMP4.Conjuntos;
+
+import QMP4.Prenda.Prenda;
 
 abstract public class Sastre {
 

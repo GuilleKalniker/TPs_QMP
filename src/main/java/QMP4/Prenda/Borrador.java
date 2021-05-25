@@ -1,4 +1,6 @@
-package QMP4;
+package QMP4.Prenda;
+
+import QMP4.Clima.Humedad;
 
 //Este va a ser mi builder
 public class Borrador {
@@ -7,7 +9,8 @@ public class Borrador {
   private Trama trama = Trama.LISA;
   private Color colorPrincipal;
   private Color colorSecundario;
-  private AfinidadClima afinidadClima;
+  private int temperaturaMaxima;
+  private Humedad humedad;
 
   public Borrador(TipoDePrenda tipoDePrenda) {
     //TODO: validateNonNull
@@ -29,14 +32,18 @@ public class Borrador {
     //TODO: validateNonNull y por defecto lisa
     this.trama = trama;
   }
-  public void especificarAfinidadClima(AfinidadClima afinidadClima) {
+  public void especificarTemperaturaMaxima(int temperaturaMaxima) {
     //TODO: validateNonNull y por defecto lisa
-    this.afinidadClima = afinidadClima;
+    this.temperaturaMaxima = temperaturaMaxima;
+  }
+  public void especificarHumedad(Humedad humedad) {
+    //TODO: validateNonNull y por defecto lisa
+    this.humedad = humedad;
   }
 
   public Prenda crearPrenda() {
     //TODO: validateNonNull
-    return new Prenda(this.tipoDePrenda, this.material, this.trama, this.colorPrincipal, this.colorSecundario,this.afinidadClima);
+    return new Prenda(this.tipoDePrenda, this.material, this.trama, this.colorPrincipal, this.colorSecundario,this.temperaturaMaxima,this.humedad);
   }
   public boolean validarMaterialConsistenteConTipoDePrenda(Material material) {
     //TODO

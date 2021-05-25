@@ -1,4 +1,4 @@
-package QMP4;
+package QMP4.Prenda;
 
 public class Color {
   private Integer rojo;
