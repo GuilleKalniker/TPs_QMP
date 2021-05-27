@@ -1,12 +1,13 @@
 package QMP4.Atuendo;
 
+import QMP4.Prenda.Criterio;
 import QMP4.Prenda.Prenda;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Guardarropas {
   private List<Prenda> prendas;
+  private Criterio criterio;
   private List<Solicitud> solicitudesPendientes;
   private List<Solicitud> solicitudesAceptadas;
 
@@ -24,10 +25,10 @@ public class Guardarropas {
   }
 
   public void solicitarAgregar(Prenda prenda){
+    this.validarCriterio(prenda);
     this.solicitudesPendientes.add(new Agregar(prenda));
   }
-  public void solicitarSacar(Prenda prenda){
-    this.solicitudesPendientes.add(new Sacar(prenda));
+  public void solicitarSacar(Prenda prenda){ this.solicitudesPendientes.add(new Sacar(prenda));
   }
 
   public void aceptarSolicitud(Solicitud solicitud){
@@ -47,7 +48,11 @@ public class Guardarropas {
     }
     solicitud.deshacerEn(this);
   }
-
+  public void validarCriterio(Prenda prenda){
+    if(!prenda.tieneCriterio(this.criterio)){
+      throw new RuntimeException("No se puede agregar una prenda con un criterio distinto al del guardarropa");
+    }
+  }
 
   public void validarSolicitudPendiente(Solicitud solicitud){
     if(!solicitudesPendientes.contains(solicitud)){

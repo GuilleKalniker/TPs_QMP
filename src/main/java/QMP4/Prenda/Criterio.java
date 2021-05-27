@@ -1,4 +1,4 @@
-package QMP4.Atuendo;
+package QMP4.Prenda;
 
 public enum Criterio {
   ROPA_DE_VIAJE,

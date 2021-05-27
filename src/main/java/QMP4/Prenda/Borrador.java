@@ -11,6 +11,7 @@ public class Borrador {
   private Color colorSecundario;
   private int temperaturaMaxima;
   private Humedad humedad;
+  private Criterio criterio;
 
   public Borrador(TipoDePrenda tipoDePrenda) {
     //TODO: validateNonNull
@@ -40,10 +41,14 @@ public class Borrador {
     //TODO: validateNonNull y por defecto lisa
     this.humedad = humedad;
   }
+  public void especificarCrterio(Criterio criterio) {
+    //TODO: validateNonNull y por defecto lisa
+    this.criterio = criterio;
+  }
 
   public Prenda crearPrenda() {
     //TODO: validateNonNull
-    return new Prenda(this.tipoDePrenda, this.material, this.trama, this.colorPrincipal, this.colorSecundario,this.temperaturaMaxima,this.humedad);
+    return new Prenda(this.tipoDePrenda, this.material, this.trama, this.colorPrincipal, this.colorSecundario,this.temperaturaMaxima,this.humedad,this.criterio);
   }
   public boolean validarMaterialConsistenteConTipoDePrenda(Material material) {
     //TODO
